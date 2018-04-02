@@ -9,26 +9,13 @@ import { reducers } from './index';
 
 import { AppComponent } from './app.component';
 
-
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
     BrowserModule,
-
     StoreModule.forRoot(reducers),
-    /**
-    * @ngrx/router-store keeps router state up-to-date in the store.
-    */
-    StoreRouterConnectingModule.forRoot({
-      /*
-        They stateKey defines the name of the state used by the router-store reducer.
-        This matches the key defined in the map of reducers
-      */
-     stateKey: 'router',
-    }),
-
     EffectsModule.forRoot([ ])
   ],
   providers: [],
